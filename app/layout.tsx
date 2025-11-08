@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ModernNavbar from "@/components/navbar/navbar";
+import { AnnouncementBar } from "@/components/annoucement-bar/AnnoucementBar";
 
 // ✅ Load Plus Jakarta Sans
 const plusJakarta = Plus_Jakarta_Sans({
@@ -24,6 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={plusJakarta.variable}>
       <body className="font-sans antialiased">
+        <AnnouncementBar text="Latest update: Keizer Group announces upcoming launch of sustainable energy solutions in West Africa." />
+
         <ModernNavbar />
         {children}
       </body>

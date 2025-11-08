@@ -134,7 +134,7 @@ export default function SectionCard({
 
   const imageElement = image && (
     <div
-      className={`flex-1 flex items-center justify-center overflow-hidden  ${
+      className={`flex-1 flex items-center justify-center overflow-hidden ${
         imageRounded ? "rounded-3xl" : ""
       }`}
     >
@@ -143,7 +143,7 @@ export default function SectionCard({
         alt={image.alt}
         width={imageWidth}
         height={imageHeight}
-        className="w-full h-auto object-cover"
+        className="w-full h-auto object-cover animate-spin-slow"
         sizes="(max-width: 768px) 100vw, 50vw"
         priority
       />

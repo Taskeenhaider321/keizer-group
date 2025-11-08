@@ -283,19 +283,22 @@ export default function ModernNavbar() {
           <Link href="/" className="text-black transition">
             Home
           </Link>
-          <Link href="/about" className="text-black transition">
+          <Link href="/keizer-medical" className="text-black transition">
             Keizer Medical
           </Link>
-          <Link href="/playground" className="text-black transition">
+          <Link href="/keizer-security" className="text-black transition">
             Keizer Security
           </Link>
-          <Link href="/resource" className="text-black transition">
+          <Link href="/keizer-minerals" className="text-black transition">
             Keizer Minerals
           </Link>
-          <Link href="/resource" className="text-black transition">
+          <Link
+            href="/keizer-communications"
+            className="text-black transition"
+          >
             Keizer Communication
           </Link>
-          <Link href="/resource" className="text-black transition">
+          <Link href="/keizer-agriculture" className="text-black transition">
             Keizer Agriculture
           </Link>
         </div>
@@ -324,35 +327,35 @@ export default function ModernNavbar() {
               Home
             </Link>
             <Link
-              href="/about"
+              href="/keizer-medical"
               className="text-black transition"
               onClick={() => setIsOpen(false)}
             >
               Keizer Medical
             </Link>
             <Link
-              href="/playground"
+              href="/keizer-security"
               className="text-black transition"
               onClick={() => setIsOpen(false)}
             >
               Keizer Security
             </Link>
             <Link
-              href="/resource"
+              href="/keizer-minerals"
               className="text-black transition"
               onClick={() => setIsOpen(false)}
             >
               Keizer Minerals
             </Link>
             <Link
-              href="/resource"
+              href="/keizer-communications"
               className="text-black transition"
               onClick={() => setIsOpen(false)}
             >
               Keizer Communication
             </Link>
             <Link
-              href="/resource"
+              href="/keizer-agriculture"
               className="text-black transition"
               onClick={() => setIsOpen(false)}
             >

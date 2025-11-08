@@ -10,3 +10,16 @@ body {
 .font-jakarta {
   font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
 }
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite; /* adjust 20s to make it faster/slower */
+}
