@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ModernNavbar from "@/components/navbar/navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// ✅ Load Plus Jakarta Sans
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Adjust weights as needed
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ModernNavbar/>
+    <html lang="en" className={plusJakarta.variable}>
+      <body className="font-sans antialiased">
+        <ModernNavbar />
         {children}
       </body>
     </html>

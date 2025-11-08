@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+body {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui,
+    sans-serif;
+
+    /* background-color: red; */
+}
+
+.font-jakarta {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
+}

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const page = () => {
+const keizerSecurity = () => {
   return (
     <div>playground Page</div>
   )
 }
 
-export default page
+export default keizerSecurity;
