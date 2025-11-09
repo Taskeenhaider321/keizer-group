@@ -5,28 +5,38 @@ interface HeroContentProps {
   accentColor?: string;
 }
 
+interface HeroContentProps {
+  heading: string;
+  headingHighlight?: string;
+  description: string;
+  accentColor?: string;
+}
+
 export function HeroContent({
   heading,
   headingHighlight,
   description,
   accentColor = "from-cyan-400 to-blue-500",
 }: HeroContentProps) {
-  // Split heading and highlight
-  const headingParts = heading.split(headingHighlight || "");
+  const containsHighlight =
+    headingHighlight && heading.includes(headingHighlight);
+  const headingParts = containsHighlight
+    ? heading.split(headingHighlight)
+    : [heading];
 
   return (
-    <div className="mb-8 md:mb-12 w-full font-jakarta max-w-[900px] ">
+    <div className="mb-8 md:mb-12 w-full font-jakarta max-w-[900px]">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[60px] w-full font-bold leading-tight mb-6 text-balance">
         <span className="text-white">{headingParts[0]}</span>
         {headingHighlight && (
           <span
-            className={`bg-gradient-to-r italic  ${accentColor} bg-clip-text text-transparent`}
+            className={`bg-gradient-to-r italic ${accentColor} bg-clip-text text-transparent`}
           >
             {headingHighlight}
           </span>
         )}
         {headingParts[1] && (
-          <span className="text-white ">{headingParts[1]}</span>
+          <span className="text-white">{headingParts[1]}</span>
         )}
       </h1>
 

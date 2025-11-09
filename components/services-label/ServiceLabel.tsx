@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 export function ServiceLabel({ item }: ServiceCardProps) {
   return (
-    <div className="bg-blue-700 rounded-lg p-6 text-white flex flex-col gap-2 min-h-full">
+    <div className="bg-[#004B8D] rounded-lg p-6 text-white flex flex-col gap-2 min-h-full">
       {/* Bullet point */}
       <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
 

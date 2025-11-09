@@ -1,20 +1,20 @@
 "use client";
 
 import React from "react";
-import { cn } from "@/lib/utils"; // optional if you already use cn utility for class merging
+import { cn } from "@/lib/utils";
 
 interface HeadingWithLineProps {
   title: string;
-  color?: string; // optional custom text color
-  lineColor?: string; // color for the horizontal line
-  align?: "left" | "center" | "right"; // alignment option
+  color?: string; // text color class
+  lineColor?: string; // line color class
+  align?: "left" | "center" | "right";
   className?: string;
 }
 
 const HeadingWithLine: React.FC<HeadingWithLineProps> = ({
   title,
   color = "text-gray-900",
-  lineColor = "",
+  lineColor = "bg-gray-300",
   align = "left",
   className,
 }) => {
@@ -28,22 +28,21 @@ const HeadingWithLine: React.FC<HeadingWithLineProps> = ({
   return (
     <div
       className={cn(
-        `w-full flex flex-col  px-4 lg:mx-2 xl:mx-0 ${alignment} gap-2`,
+        `w-full flex flex-col px-4 lg:mx-2 xl:mx-0 ${alignment} gap-2`,
         className
       )}
     >
       {/* Heading Row */}
       <div className="flex items-center gap-2">
-        {/* SVG Dot */}
+        {/* SVG Dot (color matches title) */}
         <svg
           width="8"
           height="8"
           viewBox="0 0 8 8"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="shrink-0"
+          className={cn("shrink-0 fill-current", color)}
         >
-          <circle cx="4" cy="4" r="4" fill="black" />
+          <circle cx="4" cy="4" r="4" />
         </svg>
 
         {/* Heading Text */}
@@ -55,7 +54,7 @@ const HeadingWithLine: React.FC<HeadingWithLineProps> = ({
       {/* Horizontal Line */}
       <div
         className={cn(
-          `w-full h-[2px] ${lineColor} rounded-full`,
+          `w-full h-[2px] rounded-full ${lineColor}`,
           align === "center"
             ? "mx-auto"
             : align === "right"

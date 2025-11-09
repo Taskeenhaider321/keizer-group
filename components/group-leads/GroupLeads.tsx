@@ -18,16 +18,19 @@ export const GroupLeads = () => {
             icon={groupleads[0].icon}
             title={groupleads[0].title}
             description={groupleads[0].description}
+            className="p-6 sm:p-8"
           />
           <IndustryCard
             icon={groupleads[1].icon}
             title={groupleads[1].title}
             description={groupleads[1].description}
+             className="p-6 sm:p-8"
           />
           <IndustryCard
             icon={groupleads[2].icon}
             title={groupleads[2].title}
             description={groupleads[2].description}
+             className="p-6 sm:p-8"
           />
         </div>
       </div>

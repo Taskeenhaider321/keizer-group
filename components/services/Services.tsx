@@ -1,35 +1,30 @@
 "use client";
 
 import type { ReactNode } from "react";
-// import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
 export interface SectionCardProps {
-  // Image settings
-  image?: {
-    src: string;
-    alt: string;
-  };
+  image?: { src: string; alt: string };
   imagePosition?: "left" | "right";
-  imageBgColor?: string;
   imageRounded?: boolean;
 
-  // Heading and description
+  contentImage?: {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+  };
+
   heading?: string;
   headingClassName?: string;
   description?: string | ReactNode;
   descriptionClassName?: string;
 
-  // Key offerings / list items
-  offerings?: Array<{
-    label: string;
-    icon?: ReactNode;
-  }>;
+  offerings?: Array<{ label: string; icon?: ReactNode }>;
   offeringsTitle?: string;
   offeringsClassName?: string;
 
-  // Button configuration
   button?: {
     label: string;
     onClick?: () => void;
@@ -45,14 +40,10 @@ export interface SectionCardProps {
   } | null;
   showButton?: boolean;
 
-  // Layout and styling
   containerClassName?: string;
   contentClassName?: string;
   backgroundColor?: string;
   gap?: "gap-4" | "gap-6" | "gap-8" | "gap-12";
-  padding?: "p-4" | "p-6" | "p-8" | "p-12";
-
-  // Responsive control
   imageHeight?: number;
   imageWidth?: number;
 }
@@ -60,8 +51,8 @@ export interface SectionCardProps {
 export default function SectionCard({
   image,
   imagePosition = "left",
-  // imageBgColor = "bg-slate-200",
   imageRounded = true,
+  contentImage,
   heading,
   headingClassName = "text-xl md:text-4xl font-bold mb-4",
   description,
@@ -75,15 +66,48 @@ export default function SectionCard({
   contentClassName = "",
   backgroundColor = "bg-white",
   gap = "gap-8",
-  // padding = "py-8",
   imageHeight = 300,
   imageWidth = 400,
 }: SectionCardProps) {
   const isImageLeft = imagePosition === "left";
 
+  const mainImage = image && (
+    <div
+      className={`flex-1 flex items-center justify-center overflow-hidden ${
+        imageRounded ? "rounded-3xl" : ""
+      }`}
+    >
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={imageWidth}
+        height={imageHeight}
+        className="w-full h-auto object-cover md:h-full"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        priority
+      />
+    </div>
+  );
+
   const content = (
-    <div className={`flex-1 ${contentClassName}`}>
-      {heading && <h2 className={headingClassName}>{heading}</h2>}
+    <div className={`flex-1 text-left ${contentClassName}`}>
+      {/* Show heading only on desktop */}
+      {heading && (
+        <h2 className={`${headingClassName} hidden md:block`}>{heading}</h2>
+      )}
+
+      {/* Optional content image */}
+      {contentImage && (
+        <div className="mb-6  flex items-center justify-center">
+          <Image
+            src={contentImage.src}
+            alt={contentImage.alt}
+            width={contentImage.width || 200}
+            height={contentImage.height || 150}
+            className="rounded-xl "
+          />
+        </div>
+      )}
 
       {description && <div className={descriptionClassName}>{description}</div>}
 
@@ -132,40 +156,27 @@ export default function SectionCard({
     </div>
   );
 
-  const imageElement = image && (
-    <div
-      className={`flex-1 flex items-center justify-center overflow-hidden  ${
-        imageRounded ? "rounded-3xl" : ""
-      }`}
-    >
-      <Image
-        src={image.src || "/placeholder.svg"}
-        alt={image.alt}
-        width={imageWidth}
-        height={imageHeight}
-        className="w-full h-auto object-cover md:h-full"
-        sizes="(max-width: 768px) 100vw, 50vw"
-        priority
-      />
-    </div>
-  );
-
   return (
     <section
       className={`${backgroundColor} px-5 lg:px-2 xl:px-0 py-8 rounded-lg ${containerClassName}`}
     >
-      <div className={`flex flex-col md:flex-row ${gap} items-stretch`}>
-        {isImageLeft ? (
-          <>
-            {imageElement}
-            {content}
-          </>
-        ) : (
-          <>
-            {content}
-            {imageElement}
-          </>
+      {/* Mobile layout */}
+      <div className={`flex flex-col md:hidden ${gap}`}>
+        {heading && (
+          <h2 className={`${headingClassName} text-center`}>{heading}</h2>
         )}
+        {mainImage}
+        {content}
+      </div>
+
+      {/* Desktop layout */}
+      <div
+        className={`hidden md:flex md:flex-row ${gap} items-stretch lg:items-center ${
+          isImageLeft ? "" : "md:flex-row-reverse"
+        }`}
+      >
+        {mainImage}
+        {content}
       </div>
     </section>
   );

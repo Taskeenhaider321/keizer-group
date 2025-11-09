@@ -5,6 +5,7 @@ export interface IndustryItem {
   icon: ReactNode; // can be LucideIcon or custom inline SVG
   title: string;
   description: string;
+  className?: string;
 }
 
 export interface IndustriesSectionProps {

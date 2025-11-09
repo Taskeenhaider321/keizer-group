@@ -3,15 +3,29 @@
 import { useState } from "react";
 import { Mail, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { AnnouncementBar } from "../annoucement-bar/AnnoucementBar";
 
 export default function ModernNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/keizer-medical", label: "Keizer Medical" },
+    { href: "/keizer-security", label: "Keizer Security" },
+    { href: "/keizer-minerals", label: "Keizer Minerals" },
+    { href: "/keizer-communications", label: "Keizer Communication" },
+    { href: "/keizer-agriculture", label: "Keizer Agriculture" },
+  ];
 
   return (
-    <nav className="flex justify-center bg-white w-full">
-      <div className="w-full mx-auto max-w-7xl  text-white px-4 lg:px-0 py-6 flex items-center justify-between relative">
-        {/* Left Icon */}
-        <div className="bg-white text-black rounded-full p-2 flex-shrink-0">
+    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50 transition-all">
+      <AnnouncementBar text="Latest update: Keizer Group announces upcoming launch of sustainable energy solutions in West Africa." />
+
+      <div className="w-full mx-auto max-w-7xl px-4 lg:px-0 py-4 flex items-center justify-between relative">
+        {/* Left Logo or Icon */}
+        <div className=" text-black rounded-full p-2 flex-shrink-0 ">
           <svg
             width="213"
             height="24"
@@ -280,31 +294,30 @@ export default function ModernNavbar() {
 
         {/* Center Menu Links (Desktop) */}
         <div className="hidden lg:flex justify-center flex-1 space-x-8 text-sm font-semibold">
-          <Link href="/" className="text-black transition">
-            Home
-          </Link>
-          <Link href="/keizer-medical" className="text-black transition">
-            Keizer Medical
-          </Link>
-          <Link href="/keizer-security" className="text-black transition">
-            Keizer Security
-          </Link>
-          <Link href="/keizer-minerals" className="text-black transition">
-            Keizer Minerals
-          </Link>
-          <Link
-            href="/keizer-communications"
-            className="text-black transition"
-          >
-            Keizer Communication
-          </Link>
-          <Link href="/keizer-agriculture" className="text-black transition">
-            Keizer Agriculture
-          </Link>
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative text-black hover:text-[#004B8D] transition-colors ${
+                  isActive ? "font-bold" : "font-medium"
+                }`}
+              >
+                {link.label}
+                {/* Animated underline */}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] w-0 bg-[#004B8D] transition-all duration-300 ease-in-out ${
+                    isActive ? "w-full" : "hover:w-full"
+                  }`}
+                />
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Right Email Bubble */}
-        <div className="hidden lg:flex bg-[#004B8D] text-white px-6 py-4 rounded-full text-sm font-semibold shadow-md cursor-pointer transition flex-shrink-0">
+        {/* Right Contact Button (Desktop) */}
+        <div className="hidden lg:flex bg-[#004B8D] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md cursor-pointer hover:bg-[#003b70] transition">
           Contact Us
         </div>
 
@@ -313,59 +326,35 @@ export default function ModernNavbar() {
           className="lg:hidden text-black"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
 
         {/* Mobile Dropdown */}
-        {isOpen && (
-          <div className="absolute top-full left-0 right-0  bg-white  shadow-lg flex flex-col items-center py-4 space-y-4 z-50">
+        <div
+          className={`absolute top-full left-0 right-0 bg-white shadow-lg flex flex-col items-center py-4 space-y-4 z-40 transform transition-all duration-300 ease-in-out ${
+            isOpen
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-5 pointer-events-none"
+          }`}
+        >
+          {links.map((link) => (
             <Link
-              href="/"
-              className="text-black transition"
+              key={link.href}
+              href={link.href}
               onClick={() => setIsOpen(false)}
+              className={`text-black hover:text-[#004B8D] transition font-semibold ${
+                pathname === link.href
+                  ? "underline underline-offset-4 decoration-[#004B8D]"
+                  : ""
+              }`}
             >
-              Home
+              {link.label}
             </Link>
-            <Link
-              href="/keizer-medical"
-              className="text-black transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Keizer Medical
-            </Link>
-            <Link
-              href="/keizer-security"
-              className="text-black transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Keizer Security
-            </Link>
-            <Link
-              href="/keizer-minerals"
-              className="text-black transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Keizer Minerals
-            </Link>
-            <Link
-              href="/keizer-communications"
-              className="text-black transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Keizer Communication
-            </Link>
-            <Link
-              href="/keizer-agriculture"
-              className="text-black transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Keizer Agriculture
-            </Link>
-            <div className="bg-white text-black px-6 py-4 rounded-full text-sm font-semibold shadow-md cursor-pointer hover:bg-gray-100 transition">
-              Contact Us
-            </div>
+          ))}
+          <div className="bg-[#004B8D] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md cursor-pointer hover:bg-[#003b70] transition">
+            Contact Us
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

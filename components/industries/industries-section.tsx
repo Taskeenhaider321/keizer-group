@@ -10,7 +10,7 @@ export function IndustriesSection({
   featuredImage,
 }: IndustriesSectionProps) {
   return (
-    <section className="w-full bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[#1a2131] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 tracking-tight">
@@ -25,11 +25,13 @@ export function IndustriesSection({
               icon={industries[0].icon}
               title={industries[0].title}
               description={industries[0].description}
+              className="p-6 sm:p-8"
             />
             <IndustryCard
               icon={industries[1].icon}
               title={industries[1].title}
               description={industries[1].description}
+              className="p-6 sm:p-8"
             />
           </div>
 
@@ -44,11 +46,13 @@ export function IndustriesSection({
               icon={industries[2].icon}
               title={industries[2].title}
               description={industries[2].description}
+              className="p-6 sm:p-8"
             />
             <IndustryCard
               icon={industries[3].icon}
               title={industries[3].title}
               description={industries[3].description}
+              className="p-6 sm:p-8"
             />
           </div>
         </div>

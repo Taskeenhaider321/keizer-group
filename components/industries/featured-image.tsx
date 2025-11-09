@@ -8,7 +8,7 @@ export function FeaturedImage({
     <div className="relative w-full h-full min-h-[350px] sm:min-h-[400px] md:min-h-[500px] flex items-center justify-center">
       <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
         {/* Fallback gradient background if image fails to load */}
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-cyan-500 to-blue-600 opacity-90 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-br  z-0"></div>
 
         {/* Image container */}
         <img

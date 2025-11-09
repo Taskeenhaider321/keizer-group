@@ -15,7 +15,7 @@ export interface HeroSectionProps {
   heading: string;
   headingHighlight?: string;
   description: string;
-  buttons: HeroButton[];
+  buttons?: HeroButton[];
   backgroundImage?: string;
   backgroundImageAlt?: string;
   accentColor?: string;

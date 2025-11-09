@@ -118,7 +118,7 @@ export function ContactForm() {
           <div className="hidden md:block h-full">
             <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/contact-us.png"
+                src="/contact-us-image.png"
                 alt="Professional writing and planning"
                 fill
                 className="object-cover"
@@ -243,7 +243,7 @@ export function ContactForm() {
         <div className="md:hidden mt-8">
           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dfmbrXyN9SOmEl8FPZSqGQ6omDx0gk.png"
+              src="/contact-us-image.png"
               alt="Professional writing and planning"
               fill
               className="object-cover"

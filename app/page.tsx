@@ -164,10 +164,9 @@ const page = () => {
       <OurDivison />
 
       <GroupLeads />
-      <ContactForm />
 
-      {/* <ValuesSection data={valuesData} image={teamImage} /> */}
-      {/* <IndustriesSection
+      <ValuesSection data={valuesData} image={teamImage} />
+      <IndustriesSection
         industries={defenseIndustries}
         title="Defense & Military Applications"
         featuredImage={defenseFeaturedImage}
@@ -183,8 +182,7 @@ const page = () => {
         title="Communication Features"
         subtitle="Stay connected with powerful communication tools"
       />
-      <ServiceCardsGrid items={serviceData} columns={4} /> */}
-      <Footer text="Copyright © 2025 keizer-group.com - All Rights Reserved." />
+      <ServiceCardsGrid items={serviceData} columns={4} />
     </div>
   );
 };

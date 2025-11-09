@@ -21,16 +21,16 @@ interface FeatureCardsGridProps {
 export function BlogTwoGrid({
   data,
   title,
-  subtitle,
+  subtitle ="",
   className = "",
 }: FeatureCardsGridProps) {
   return (
     <section
-      className={`w-full mx-auto max-w-7xl py-8 sm:py-12 md:py-16 ${className}`}
+      className={`w-full mx-auto max-w-7xl pt-8 sm:pt-12 md:pt-16 ${className}`}
     >
       {/* Header */}
       {(title || subtitle) && (
-        <div className="mb-8 sm:mb-10 md:mb-12 text-center">
+        <div className="mb-8 sm:mb-10 md:mb-12 text-left">
           {title && (
             <h2 className="text-2xl font-bold text-foreground sm:text-3xl md:text-4xl mb-2 text-balance">
               {title}

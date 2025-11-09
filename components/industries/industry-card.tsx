@@ -4,12 +4,15 @@ export function IndustryCard({
   icon,
   title,
   description,
-}: Pick<IndustryItem, "icon" | "title" | "description">) {
+  className = "",
+}: Pick<IndustryItem, "icon" | "title" | "description" | "className">) {
   return (
-    <div className=" backdrop-blur-sm rounded-[16px] p-6 sm:p-8 bg-[#1a2131] transition-colors duration-300">
+    <div
+      className={`backdrop-blur-sm rounded-[16px] bg-[#101828] transition-colors duration-300  ${className}`}
+    >
       {/* Icon */}
       <div className="mb-6">
-        <div className="w-12 h-12  rounded-lg flex items-center justify-center">
+        <div className="w-12 h-12 rounded-lg flex items-center justify-center">
           {icon}
         </div>
       </div>

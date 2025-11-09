@@ -3,13 +3,13 @@ import Link from "next/link";
 import type { HeroButton } from "./hero-section";
 
 interface HeroButtonsProps {
-  buttons: HeroButton[];
+  buttons?: HeroButton[];
 }
 
 export function HeroButtons({ buttons }: HeroButtonsProps) {
   return (
     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-      {buttons.map((button, index) => (
+      {buttons?.map((button, index) => (
         <button
           key={index}
           onClick={button.onClick}

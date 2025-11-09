@@ -13,7 +13,7 @@ interface AnnouncementBarProps {
 export function AnnouncementBar({
   text,
   repeat = 2,
-  backgroundColor = "bg-blue-600",
+  backgroundColor = "bg-[#004B8D]",
   textColor = "text-white",
   separator = "   •   ", // default spacing and separator
 }: AnnouncementBarProps) {
