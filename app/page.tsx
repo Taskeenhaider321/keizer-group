@@ -165,13 +165,13 @@ const page = () => {
 
       <GroupLeads />
 
-      <ValuesSection data={valuesData} image={teamImage} />
+      {/* <ValuesSection data={valuesData} image={teamImage} />
       <IndustriesSection
         industries={defenseIndustries}
         title="Defense & Military Applications"
         featuredImage={defenseFeaturedImage}
-      />
-      <FeatureCard {...educationData} />
+      /> */}
+      {/* <FeatureCard {...educationData} />
       <BlogCardsGrid
         data={communicationFeatures}
         title="Communication Features"
@@ -182,7 +182,7 @@ const page = () => {
         title="Communication Features"
         subtitle="Stay connected with powerful communication tools"
       />
-      <ServiceCardsGrid items={serviceData} columns={4} />
+      <ServiceCardsGrid items={serviceData} columns={4} /> */}
     </div>
   );
 };
