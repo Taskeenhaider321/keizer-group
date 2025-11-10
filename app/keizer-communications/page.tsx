@@ -228,7 +228,7 @@ const keizerCommunications = () => {
           />
           <IndustriesSection
             industries={defenseIndustries}
-            title="Defense & Military Applications"
+            title="Industries & Mission-Critical Applications"
             featuredImage={defenseFeaturedImage}
           />
         </div>

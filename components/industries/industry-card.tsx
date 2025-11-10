@@ -8,7 +8,7 @@ export function IndustryCard({
 }: Pick<IndustryItem, "icon" | "title" | "description" | "className">) {
   return (
     <div
-      className={`backdrop-blur-sm rounded-[16px] bg-[#1a2131] transition-colors duration-300  ${className}`}
+      className={`backdrop-blur-sm rounded-[16px] bg-[#101828] transition-colors duration-300  ${className}`}
     >
       {/* Icon */}
       <div className="mb-6">

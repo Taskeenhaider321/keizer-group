@@ -21,8 +21,9 @@ export const defenseIndustries: IndustryItem[] = [
         />
       </svg>
     ),
-    title: "Circular Economy in Action:",
-    description: "Converts food waste into productive agricultural inputs.",
+    title: "Defense & Military Operations",
+    description:
+      "Secure battlefield communications with encrypted, cross-border connectivity.",
   },
   {
     id: "government",
@@ -43,9 +44,9 @@ export const defenseIndustries: IndustryItem[] = [
         />
       </svg>
     ),
-    title: "Reduced Emissions:",
+    title: "Government & Public Safety",
     description:
-      "Organic production lowers greenhouse gases compared to synthetic fertilisers.",
+      "Police, emergency response, and disaster relief teams connected under one sovereign system.",
   },
   {
     id: "corporate",
@@ -66,9 +67,9 @@ export const defenseIndustries: IndustryItem[] = [
         />
       </svg>
     ),
-    title: "Soil Regeneration:",
+    title: "Corporate Security & Critical Infrastructure",
     description:
-      "Restores degraded soils and boosts long-term agricultural productivity.",
+      "Protecting executives, assets, and facilities with uninterrupted secure communications.",
   },
   {
     id: "highrisk",
@@ -90,13 +91,13 @@ export const defenseIndustries: IndustryItem[] = [
         />
       </svg>
     ),
-    title: "National Security:",
+    title: "High-Risk Environments",
     description:
-      "Supports governments in reducing dependency on imported fertilisers.",
+      "Mining, oil & gas, and remote industrial operations requiring robust, resilient networks.",
   },
 ];
 
 export const defenseFeaturedImage = {
-  src: "/benefits-vertical.png",
+  src: "/vertical-communication.png",
   alt: "Sustainability & Environmental Benefits",
 };
