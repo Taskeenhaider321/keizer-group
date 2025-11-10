@@ -103,7 +103,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="w-full  mx-auto max-w-7xl py-12 md:py-20 px-4 md:px-0">
+    <section id="contact-us" className="w-full  mx-auto max-w-7xl py-12 md:py-20 px-4 md:px-0">
       <HeadingWithLine
         title="Contact Us"
         color="text-black"

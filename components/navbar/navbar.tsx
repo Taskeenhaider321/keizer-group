@@ -318,7 +318,7 @@ export default function ModernNavbar() {
 
         {/* Right Contact Button (Desktop) */}
         <div className="hidden lg:flex bg-[#004B8D] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md cursor-pointer hover:bg-[#003b70] transition">
-          Contact Us
+          <a href="#contact-us">Contact Us</a>
         </div>
 
         {/* Mobile Menu Button */}

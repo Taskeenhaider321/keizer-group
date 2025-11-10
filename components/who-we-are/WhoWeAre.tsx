@@ -40,7 +40,8 @@ export const WhoWeAre = () => {
         // ]}
         button={{
           label: "Contact Our Team",
-          onClick: () => console.log("Learn More clicked"),
+          href: "#contact-us",
+          // onClick: () => console.log("Learn More clicked"),
         }}
       />
     </div>

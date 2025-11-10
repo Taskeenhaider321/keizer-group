@@ -42,7 +42,8 @@ export default function OurDivison() {
           ]}
           button={{
             label: "Learn More",
-            onClick: () => console.log("Learn More clicked"),
+            href: "/keizer-medical",
+            // onClick: () => console.log("Learn More clicked"),
           }}
         />
 
@@ -68,7 +69,8 @@ export default function OurDivison() {
             ]}
             button={{
               label: "Learn More",
-              onClick: () => console.log("Learn More clicked"),
+              href: "/keizer-security",
+              // onClick: () => console.log("Learn More clicked"),
             }}
           />
         </div>
@@ -94,7 +96,8 @@ export default function OurDivison() {
             ]}
             button={{
               label: "Learn More",
-              onClick: () => console.log("Learn More clicked"),
+              href: "/keizer-minerals",
+              // onClick: () => console.log("Learn More clicked"),
             }}
           />
         </div>
@@ -121,7 +124,8 @@ export default function OurDivison() {
             ]}
             button={{
               label: "Learn More",
-              onClick: () => console.log("Learn More clicked"),
+              href: "/keizer-communications",
+              // onClick: () => console.log("Learn More clicked"),
             }}
           />
         </div>
@@ -146,7 +150,8 @@ export default function OurDivison() {
             ]}
             button={{
               label: "Learn More",
-              onClick: () => console.log("Learn More clicked"),
+              href: "/keizer-agriculture",
+              // onClick: () => console.log("Learn More clicked"),
             }}
           />
         </div>

@@ -90,7 +90,7 @@ export default function SectionCard({
   );
 
   const content = (
-    <div className={`flex-1 text-left ${contentClassName}`}>
+    <div  id="our-journey" className={`flex-1 text-left ${contentClassName}`}>
       {/* Show heading only on desktop */}
       {heading && (
         <h2 className={`${headingClassName} hidden md:block`}>{heading}</h2>

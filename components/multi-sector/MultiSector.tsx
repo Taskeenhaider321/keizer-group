@@ -51,6 +51,7 @@ export const MultiSector = () => {
         // ]}
         button={{
           label: "Contact Our Team",
+          href: "#contact-us",
           //   onClick: () => console.log("Learn More clicked"),
         }}
       />

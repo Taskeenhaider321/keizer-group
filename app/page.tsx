@@ -110,18 +110,18 @@ const page = () => {
         heading="Driving Growth. Securing Futures. Empowering "
         headingHighlight="Communities."
         description="Transforming industries through innovation, security, and opportunity— creating long-term impact for people and businesses."
-        buttons={[
-          {
-            label: "Explore Our Companies",
-            variant: "primary",
-            href: "/companies",
-          },
-          {
-            label: "Learn More",
-            variant: "secondary",
-            href: "/about",
-          },
-        ]}
+        // buttons={[
+        //   {
+        //     label: "Explore Our Company",
+        //     variant: "primary",
+        //     href: "#our-journey",
+        //   },
+          // {
+          //   label: "Learn More",
+          //   variant: "secondary",
+          //   href: "/about",
+          // },
+        // ]}
         backgroundImage="/hero-image.jpg"
         accentColor="from-cyan-400 to-blue-500"
       />
