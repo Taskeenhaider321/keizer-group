@@ -22,7 +22,7 @@ export function IndustryCard({
         {title}
       </h3>
 
-      {/* Description */}
+      
       <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
         {description}
       </p>
