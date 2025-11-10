@@ -17,7 +17,7 @@ export function IndustryCard({
         </div>
       </div>
 
-      {/* Title */}
+      
       <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 leading-tight">
         {title}
       </h3>
