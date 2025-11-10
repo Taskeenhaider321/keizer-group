@@ -45,8 +45,7 @@ export function SecurityServices() {
         "Curriculum covering surveillance detection, crisis management, and tactical operations.",
         "Delivered by seasoned instructors with decades of operational experience.",
       ],
-      imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8NgJvDkCroRrV9MmiUn68Twl2Yn6wa.png",
+      imageUrl: "/security-grid-one.png",
       imageAlt: "Secure Messaging feature",
     },
     {
@@ -58,8 +57,7 @@ export function SecurityServices() {
         "Weapons engineered for retention and realistic handling without live ammunition risk.",
         "Used to train CPOs, security teams, and law enforcement in safe, repeatable, and cost-effective environments.",
       ],
-      imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8NgJvDkCroRrV9MmiUn68Twl2Yn6wa.png",
+      imageUrl: "/security-grid-two.png",
       imageAlt: "Voice Calling feature",
     },
     {
@@ -71,8 +69,7 @@ export function SecurityServices() {
         "Weapons engineered for retention and realistic handling without live ammunition risk.",
         "Used to train CPOs, security teams, and law enforcement in safe, repeatable, and cost-effective environments.",
       ],
-      imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8NgJvDkCroRrV9MmiUn68Twl2Yn6wa.png",
+      imageUrl: "/security-grid-three.png",
       imageAlt: "Video Conferencing feature",
     },
   ];

@@ -24,7 +24,7 @@ const keizerMinerals = () => {
         "Strategic logistics ensuring uninterrupted supply to urban and rural markets.",
         "Partnership-ready capacity for mega-projects such as highways, airports, and public housing.",
       ],
-      imageUrl: "/security-services-one.png",
+      imageUrl: "/mineral-one.png",
       imageAlt: "Secure Messaging feature",
     },
     {
@@ -37,7 +37,7 @@ const keizerMinerals = () => {
         "Applications across food, pharmaceuticals, and industrial products.",
         "Commitment to sustainable practices, ensuring compliance with international environmental standards.",
       ],
-      imageUrl: "/security-services-two.png",
+      imageUrl: "/mineral-two.png",
       imageAlt: "Voice Calling feature",
     },
     {
@@ -50,7 +50,7 @@ const keizerMinerals = () => {
         "Large-scale export capabilities serving international markets.",
         "Advanced harvesting and refining technologies reducing environmental impact.",
       ],
-      imageUrl: "/security-services-two.png",
+      imageUrl: "/mineral-three.png",
       imageAlt: "Voice Calling feature",
     },
     {
@@ -63,7 +63,7 @@ const keizerMinerals = () => {
         "Private-label production for governments and institutional partners.",
         "Commitment to sustainability with recyclable packaging and eco-friendly bottling facilities.",
       ],
-      imageUrl: "/security-services-two.png",
+      imageUrl: "/mineral-four.png",
       imageAlt: "Voice Calling feature",
     },
   ];
