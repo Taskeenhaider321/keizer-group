@@ -10,7 +10,7 @@ import HeadingWithLine from "../headline/Headline";
 
 export default function OurDivison() {
   return (
-    <main className="">
+    <main id="our-divisions" className="">
       <div className="max-w-7xl py-10 mx-auto">
         <HeadingWithLine
           title="Our Divisions"

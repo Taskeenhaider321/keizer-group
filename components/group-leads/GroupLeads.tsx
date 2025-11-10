@@ -4,7 +4,7 @@ import { groupleads } from "@/data/group-leads";
 
 export const GroupLeads = () => {
   return (
-    <div className="w-full max-w-[1400px] rounded-3xl mx-auto bg-[#101828] my-10 py-10">
+    <div id="why-lead" className="w-full max-w-[1400px] rounded-3xl mx-auto bg-[#101828] my-10 py-10">
       <div className="w-full max-w-7xl mx-auto">
         <HeadingWithLine
           title="Why Keizer Group Leads"
