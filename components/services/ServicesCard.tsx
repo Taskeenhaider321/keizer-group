@@ -143,7 +143,7 @@ export default function SectionCard({
         alt={image.alt}
         width={imageWidth}
         height={imageHeight}
-        className="w-full h-auto object-cover animate-spin-slow"
+        className="w-full h-auto object-cover "
         sizes="(max-width: 768px) 100vw, 50vw"
         priority
       />
