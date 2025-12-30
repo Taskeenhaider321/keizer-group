@@ -49,7 +49,7 @@ export default function OurDivison() {
 
         <div className="mt-8">
           <SectionCard
-            heading="Mcgee&Durraniconsulting / Security Services"
+            heading="Mcgee&DurraniConsulting / Security Services"
             image={{
               src: "/keizer-security.png",
               alt: "Medical technology",
