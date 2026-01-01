@@ -45,7 +45,7 @@ const keizerSecurity = () => {
             src: "/durani-image.png",
             alt: "Growth chart",
           }}
-          heading="McGee & Durrani Consulting"
+          heading="McGee&Durrani Consulting"
           image={{
             src: "/medical-introduction.png",
             alt: "Medical professional with shield",
